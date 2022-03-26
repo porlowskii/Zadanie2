@@ -19,9 +19,12 @@ private List <Integer> table = new ArrayList();
                 if (table.get(i)%o==0) {
                     controlNumber++;
                 }
-                if (controlNumber==4) {
-                    workingTable.add(table.get(i));
-                }
+            }
+            if(controlNumber>4) {
+                break;
+            }
+            if (controlNumber==4) {
+                workingTable.add(table.get(i));
             }
         }
         return workingTable.stream().sorted().collect(Collectors.toList());
